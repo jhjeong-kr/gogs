@@ -275,6 +275,7 @@ func NewContext() {
 		}
 	} else {
 		log.Warn("Custom config '%s' not found, ignore this if you're running first time", CustomConf)
+		log.Warn("fs: '%s'", os.Getenv("HELION_FILESYSTEM"))
 	}
 	Cfg.NameMapper = ini.AllCapsUnderscore
 
